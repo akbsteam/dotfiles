@@ -1,5 +1,3 @@
-tap "azure/functions"
-tap "dart-lang/dart"
 tap "homebrew/bundle"
 
 brew "gh"
@@ -24,32 +22,51 @@ brew "miller"
 brew "node"
 brew "scrcpy"
 brew "yarn"
-brew "azure/functions/azure-functions-core-tools@4"
 
 cask "1password"
 cask "1password-cli"
 cask "alfred"
 cask "android-platform-tools"
-cask "dotnet-sdk"
-cask "flutter"
+cask "chatgpt"
+cask "deskflow"
+cask "docker-desktop"
 cask "fork"
+cask "google-chrome"
 cask "iterm2"
-cask "localcan"
+cask "mockoon"
 cask "ngrok"
-cask "postman"
+cask "obsidian"
 cask "rapidapi"
 cask "slack"
-cask "unity-hub"
 cask "visual-studio-code"
-cask "xcodes"
+cask "xcodes-app"
 
 vscode "arjun.swagger-viewer"
-vscode "azurite.azurite"
-vscode "dart-code.dart-code"
-vscode "dart-code.flutter"
 vscode "davidnussio.vscode-jq-playground"
 vscode "humao.rest-client"
 vscode "jq-syntax-highlighting.jq-syntax-highlighting"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+
+mas 'Bear', id: 1091189122
+mas '1Password for Safari', id: 1569813296
+
+{{- if eq .location "twyn" }}
+tap "azure/functions"
+tap "dart-lang/dart"
+
+brew "azure/functions/azure-functions-core-tools@4"
+
+cask "dotnet-sdk"
+cask "flutter"
+cask "localcan"
+cask "postman"
+cask "unity-hub"
+
+vscode "azurite.azurite"
+vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
 vscode "ms-azuretools.azure-dev"
 vscode "ms-azuretools.vscode-azure-github-copilot"
 vscode "ms-azuretools.vscode-azureappservice"
@@ -64,13 +81,11 @@ vscode "ms-azuretools.vscode-docker"
 vscode "ms-dotnettools.csdevkit"
 vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
 vscode "ms-vscode.vscode-node-azure-pack"
 vscode "quicktype.quicktype"
 vscode "redhat.vscode-yaml"
 vscode "vscjava.vscode-gradle"
 
-mas 'Bear', id: 1091189122
-mas '1Password for Safari', id: 1569813296
+{{- end }}
+
+
